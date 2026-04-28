@@ -49,9 +49,13 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.4.2f1\Editor\Data\Tools\BuildPipeline\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\BuyItem.cs" />
     <Compile Include="Assets\Script\Playerhealth.cs" />
     <Compile Include="Assets\Script\PlayerAttack.cs" />
+    <Compile Include="Assets\Script\Coin.cs" />
     <Compile Include="Assets\Script\LoadLevel.cs" />
+    <Compile Include="Assets\Script\PlayerBase.cs" />
+    <Compile Include="Assets\Script\PlayerMoney.cs" />
     <Compile Include="Assets\Script\FadeManager.cs" />
     <Compile Include="Assets\Script\Camerafollow.cs" />
     <Compile Include="Assets\Script\EnemyAI.cs" />

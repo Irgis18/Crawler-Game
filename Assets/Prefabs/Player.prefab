@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 3213462284271408676}
   - component: {fileID: 6455464018801802380}
   - component: {fileID: 8977999651610433372}
+  - component: {fileID: 272172038195791686}
+  - component: {fileID: 4317271572598624694}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -229,9 +231,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39452ba24bfd904499dcb3f328a247bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  maxHealth: 5
+  maxHealth: 2
   isAlive: 1
   healthbarUI: {fileID: 0}
   hpPrefab: {fileID: 5740197604455263968, guid: 7494f4990b1fbad43ad3feb2c5fa7011, type: 3}
   animator: {fileID: 7054667518340252037}
   spriteRenderer: {fileID: 6182786362280326528}
+--- !u!114 &272172038195791686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755148020545093697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817c304c44b3e704986545a8209ed419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  coinText: {fileID: 0}
+  currentCoins: 1
+--- !u!114 &4317271572598624694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8755148020545093697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9fba1df36ead3842bf04c9ee96d1189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  playerAttack: {fileID: 3213462284271408676}
+  playerhealth: {fileID: 8977999651610433372}
+  playerMovement: {fileID: 8546617624014031432}
+  playerMoney: {fileID: 272172038195791686}

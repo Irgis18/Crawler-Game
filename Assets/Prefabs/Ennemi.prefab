@@ -147,7 +147,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 8529607729958520305}
   attackCooldown: 2
   damage: 1
-  maxHealth: 10
+  maxHealth: 2
+  coinPrefab: {fileID: 6752594076138463701, guid: d2b6e4e7a7bca14418c50182af1736c2, type: 3}
 --- !u!50 &4252119829992815078
 Rigidbody2D:
   serializedVersion: 5
