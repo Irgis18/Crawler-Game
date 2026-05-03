@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   maxHealth: 2
+  currentHealth: 0
   isAlive: 1
   healthbarUI: {fileID: 0}
   hpPrefab: {fileID: 5740197604455263968, guid: 7494f4990b1fbad43ad3feb2c5fa7011, type: 3}
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   coinText: {fileID: 0}
-  currentCoins: 1
+  currentCoins: 0
 --- !u!114 &4317271572598624694
 MonoBehaviour:
   m_ObjectHideFlags: 0

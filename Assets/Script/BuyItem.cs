@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class BuyItem : MonoBehaviour
@@ -11,6 +12,18 @@ public class BuyItem : MonoBehaviour
     public int hpModifier;
 
     public float damageMultiplier;
+
+    public Text priceText;
+
+    void Start()
+    {
+        priceText.text = price.ToString();
+
+        if(price > PlayerBase.Instance.playerMoney.currentCoins)
+        {
+            priceText.color = Color.red;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

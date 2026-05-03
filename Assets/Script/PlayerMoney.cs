@@ -11,11 +11,6 @@ public class PlayerMoney : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (PlayerPrefs.HasKey("Money"))
-        {
-            currentCoins = PlayerPrefs.GetInt("Money");
-        }
-
         coinText = GameObject.FindGameObjectWithTag("CoinsText").GetComponent<Text>();
         UpdateCoinsCount();
     }

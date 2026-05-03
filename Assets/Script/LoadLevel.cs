@@ -10,16 +10,12 @@ public class LoadLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SaveData();
+            PlayerBase.Instance.SaveData();
             StartCoroutine(LoadSceneWithFade(levelToLoad));
             
         }
 
-        void SaveData()
-        {
-            PlayerPrefs.SetInt("Money", PlayerBase.Instance.playerMoney.currentCoins);
-            PlayerPrefs.Save();
-        }
+       
 
     IEnumerator LoadSceneWithFade(string sceneName)
     {

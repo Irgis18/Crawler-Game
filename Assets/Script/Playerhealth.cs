@@ -3,7 +3,7 @@ using UnityEngine;
 public class Playerhealth : MonoBehaviour
 {
     public int maxHealth = 3;
-    private int currentHealth;
+    public int currentHealth;
 
     public bool isAlive = true;
 
