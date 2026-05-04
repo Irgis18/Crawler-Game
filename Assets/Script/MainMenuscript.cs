@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -5,14 +6,12 @@ using UnityEngine.UI;
 public class MainMenuscript : MonoBehaviour
 {
     private Button button;
+
+    private Canvas canvas;
+
     public void LoadScene(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
-    }
-
-    public void Option()
-    {
-        if(Button)
     }
 
     public void QuitGame()
