@@ -1,16 +1,34 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuCrontroller : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [Header("Levels To Load")]
+    public string newgamelvl;
+    private string lvlToload;
+    [SerializeField] private GameObject noSavedGameDialog = null;
+
+    public void NewGameDialogYes()
     {
-        
+        SceneManager.LoadScene(newgamelvl);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadGameDialogYes()
     {
-        
+        if (PlayerPrefs.HasKey("SavedLevel"))
+        {
+            lvlToload = PlayerPrefs.GetString("SavedLevel");
+            SceneManager.LoadScene(lvlToload);
+        }
+        else
+        {
+            noSavedGameDialog.SetActive(true);
+        }
+    }
+
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }
