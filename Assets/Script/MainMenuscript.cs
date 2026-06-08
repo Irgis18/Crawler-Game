@@ -1,16 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+
 
 public class MainMenuscript : MonoBehaviour
 {
-    private Button button;
 
-    private Canvas canvas;
-    public void LoadScene(string sceneName)
+    public void StartGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
     }
