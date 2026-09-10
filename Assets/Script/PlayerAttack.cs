@@ -43,12 +43,23 @@ public class PlayerAttack : MonoBehaviour
                 if(Vector2.Dot(attackDirection, directionToEnemy) > 0)
                 {
                     //retire des points de vie à l'ennemie
-                    EnemyAI enemyScript = collider.GetComponent<EnemyAI>();
-                    enemyScript.TakeDamage(damage);
+                    EnemyAIGobelin enemyScript = collider.GetComponent<EnemyAIGobelin>();
+                    EnemyAIGobelinArcher enemyScript1 = collider.GetComponent<EnemyAIGobelinArcher>();
 
                     Vector2 knockbackDirection = (collider.transform.position - transform.position).normalized;
                     
-                    enemyScript.rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+                    if(enemyScript != null)
+                    {
+                        enemyScript.TakeDamage(damage);
+                        enemyScript.rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+                    }
+
+                       if(enemyScript1 != null)
+                    {
+                        enemyScript1.TakeDamage(damage);
+                        enemyScript1.rb.AddForce(knockbackDirection * knockbackForce, ForceMode2D.Impulse);
+                    }
+
                 }
             }
         }

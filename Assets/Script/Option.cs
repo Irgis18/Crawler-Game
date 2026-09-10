@@ -38,8 +38,8 @@ public class Option : MonoBehaviour
         //Initier les valeurs
         resolutionDropdown.value = currentResolutions;
         fullScreenToggle.isOn = Screen.fullScreen;
-        mixer.GetFloat("Master", out float _volume);
-        volumeSlider.value = Mathf.InverseLerp(-100f, 5f, _volume);
+        mixer.GetFloat("Master", out float volume);
+        volumeSlider.value = Mathf.Pow(10f, volume / 20f);
 
         //Lier les evenenement
         volumeSlider.onValueChanged.AddListener(UpdateVolume);
@@ -47,10 +47,10 @@ public class Option : MonoBehaviour
         fullScreenToggle.onValueChanged.AddListener(ToggleFullScreen);
     }
 
-    private void UpdateVolume(float _value)
+    private void UpdateVolume(float value)
     {
-        print("Audio Volume : " + _value);
-        mixer.SetFloat("Master", Mathf.Lerp(-100, 0, _value));
+        value = Mathf.Clamp(value,0.0001f, 1f);
+        mixer.SetFloat("Master", Mathf.Log10(value) * 20);
     }
 
     private void UpdateResolution(int _value)

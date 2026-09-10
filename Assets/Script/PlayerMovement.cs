@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public float moveSpeed = 3;
+    public float moveSpeed = 20;
 
     public Rigidbody2D rigibody;
 
