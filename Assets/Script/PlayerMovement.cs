@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     public Playerhealth playerhealth;
+
+ 
+
     // Update is called once per frame
     void Update()
     {

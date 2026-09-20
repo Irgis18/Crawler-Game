@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1256333011887053093}
   - component: {fileID: 2334032871125086016}
+  - component: {fileID: 2234969329251168802}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -45,3 +46,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   pauseMenuUi: {fileID: 0}
+--- !u!114 &2234969329251168802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4779999745500196493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c89e77d6bf1374186a1cc153c25393, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameOver
+  gameOverUI: {fileID: 0}
